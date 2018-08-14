@@ -36,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
     public void chooseAnswer(View view){
         if(Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())){
             resultTextView.setText("Correct");
+            resultTextView.setBackgroundColor(getResources().getColor(R.color.colorCorrect));
             score++;
         }else{
             resultTextView.setText("Wrong :(");
+            resultTextView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
         }
         numberOfQuestions++;
         scoreTextView.setText(score+" / "+numberOfQuestions);
